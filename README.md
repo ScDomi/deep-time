@@ -7,9 +7,11 @@ Deep Time is an experimental browser simulation: advance a synthetic planet thro
 ## Current prototype
 
 - Deterministic seeded simulation
-- Climate, ocean cover and population pressure
-- Trait-driven survival (`speed`, `resilience`, `fertility`)
-- Procedural speciation and extinction
+- Nine spatial biomes with different climates and carrying capacities
+- Habitat fitness, crowding and migration between neighboring regions
+- Four heritable traits (`speed`, `resilience`, `fertility`, `aquatic`)
+- Procedural speciation, extinction and persistent parent-child ancestry
+- Interactive phylogenetic record and specimen inspector
 - Meteor, oxygen and sea-level interventions
 - Fossil-record event timeline
 - Zero backend and zero personal data
