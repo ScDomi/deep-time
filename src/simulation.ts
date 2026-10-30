@@ -41,8 +41,11 @@ function habitatFit(s: Species, b: Biome, globalTemp: number) {
 
 export function advance(input: World, steps = 1): World {
   const world: World = structuredClone(input)
-  const random = rng(world.seed + world.year + 991)
   for (let n = 0; n < steps; n++) {
+    // Derive and persist randomness one stratum at a time so advancing 100K years
+    // is identical to advancing 10K years ten times. Geological history must not
+    // depend on which UI control was used to reach the same simulation age.
+    const random = rng(world.seed + world.year + 991)
     world.year += 10_000
     world.temperature = Math.max(-3, Math.min(31, world.temperature + (random() - .48) * 1.8))
     world.sea = Math.max(5, Math.min(95, world.sea + (world.temperature - 14) * .08 + (random() - .5) * 3))
@@ -72,9 +75,9 @@ export function advance(input: World, steps = 1): World {
       }
     }
     if (random() < .025) world.events.unshift({ year: world.year, kind: 'climate', text: world.temperature > 18 ? 'A greenhouse pulse redrew the habitable world.' : 'A long glaciation drove life toward refugia.' })
+    world.seed = Math.floor(random() * 1_000_000_000)
   }
   world.biodiversity = world.species.filter(s => !s.extinct).length
-  world.seed = Math.floor(random() * 1_000_000_000)
   world.events = world.events.slice(0, 50)
   return world
 }
