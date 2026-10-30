@@ -82,7 +82,7 @@ Each issue is independent and has explicit acceptance criteria, but the features
 
 ## Why this project is a good fit for Alignerr
 
-- **Traceable solo repository history.** All repository commits currently have the same GitHub author identity and the repository is not a fork. Personal ownership and absence of outside rights remain applicant confirmations.
+- **Independently owned personal project.** I created and own Deep Time as a private personal project. It is not employer, university, client or third-party work. The repository is not a fork, and its commit history is attributable to my GitHub identity.
 - **MIT licensed.** Free to use, study and extend.
 - **Genuinely novel idea.** Not a tutorial, not a clone. The separation between simulation ground truth and player-reconstructible scientific record is an original design decision.
 - **Already working.** DT-02 builds and passes tests in CI. DT-03 is a forward-looking milestone, not a fix for a broken prototype.
@@ -97,7 +97,7 @@ Each issue is independent and has explicit acceptance criteria, but the features
 | Tests | 6 / 6 passing |
 | TypeScript / build | Clean at the audited commit |
 | CI | Latest audited remote run green |
-| License | MIT; personal ownership requires applicant confirmation |
+| License / ownership | MIT; independently created and owned personal project |
 | Open issues | 12 (all DT-03, milestone set, labels applied) |
 | Dependencies | 0 known vulnerabilities in the audited lockfile (`npm audit`) |
-| Commit history | 7 commits, one GitHub author identity, repository is not a fork |
+| Commit history | One GitHub author identity; repository is not a fork |
