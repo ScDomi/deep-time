@@ -5,7 +5,6 @@ Thank you for your interest in Deep Time.
 ## How to contribute
 
 1. Check the [open issues](https://github.com/ScDomi/deep-time/issues).
-   - `good first issue` — well-scoped, documented starting points.
    - `dt-03` — all Geological Memory milestone work.
 2. Comment on an issue before starting to avoid duplicate effort.
 3. Fork the repo, create a branch named `feat/issue-N-short-description`.
@@ -14,8 +13,9 @@ Thank you for your interest in Deep Time.
 ## Development
 
 ```bash
-npm install
+npm ci
 npm run dev     # Vite dev server
+npm run typecheck
 npm test        # Vitest unit tests
 npm run build   # TypeScript + production bundle
 ```

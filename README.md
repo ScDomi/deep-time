@@ -34,7 +34,7 @@ All 12 implementation issues are tracked in the [DT-03 milestone](https://github
 ## Run locally
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -42,6 +42,7 @@ Verification:
 
 ```bash
 npm test       # 6 unit tests, should be green
+npm run typecheck
 npm run build  # TypeScript + Vite, zero warnings
 ```
 
@@ -51,7 +52,7 @@ Simulation logic lives in `src/simulation.ts` as a set of pure functions — `cr
 
 ## Contributing
 
-Issues are labelled `good first issue` where appropriate. The `dt-03` label marks all geological memory work. Every issue has explicit acceptance criteria and a suggested test.
+The `dt-03` label marks all Geological Memory work. Every milestone issue has explicit acceptance criteria and test expectations.
 
 ## License
 

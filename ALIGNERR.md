@@ -10,7 +10,7 @@ https://github.com/ScDomi/deep-time
 
 ## One-line summary
 
-A deterministic procedural evolution simulator where interventions reshape millions of years of natural history, reconstructable through fossils and geological strata.
+A deterministic procedural evolution simulator where interventions reshape millions of years of natural history and leave an inspectable phylogenetic record.
 
 ---
 
@@ -20,7 +20,7 @@ Deep Time advances a synthetic planet through geological time. At each 10,000-ye
 
 The simulation is fully deterministic: the same seed always produces the same history. Every species that ever existed is recorded with its traits, ancestry and extinction time, making the full phylogenetic record inspectable at any point.
 
-The current build (DT-02) is a working browser app: no backend, no personal data, load and play in seconds.
+The current build (DT-02) is a working browser app with no backend and no personal-data collection. Actual fossils and geological strata are explicitly planned for DT-03 and are not presented as current functionality.
 
 ---
 
@@ -28,9 +28,9 @@ The current build (DT-02) is a working browser app: no backend, no personal data
 
 - **Language:** TypeScript (strict mode)
 - **Framework:** React 19 + Vite
-- **Tests:** Vitest (6 unit tests, 100 % of exported engine functions covered)
+- **Tests:** Vitest (6 deterministic engine tests, including chunk-parity regression coverage)
 - **CI:** GitHub Actions — test + build on every push and pull request
-- **Deployment:** GitHub Pages (build artifact)
+- **Deployment:** not required; the production bundle is reproducible locally and in CI
 - **Architecture:** pure-function simulation engine (`simulation.ts`) completely separated from the React UI (`App.tsx`)
 
 ---
@@ -82,22 +82,22 @@ Each issue is independent and has explicit acceptance criteria, but the features
 
 ## Why this project is a good fit for Alignerr
 
-- **Solo ownership from day one.** Every commit is authored by ScDomi. No co-authors, no forks, no external dependencies beyond the declared npm packages.
+- **Traceable solo repository history.** All repository commits currently have the same GitHub author identity and the repository is not a fork. Personal ownership and absence of outside rights remain applicant confirmations.
 - **MIT licensed.** Free to use, study and extend.
 - **Genuinely novel idea.** Not a tutorial, not a clone. The separation between simulation ground truth and player-reconstructible scientific record is an original design decision.
-- **Already working.** DT-02 builds and passes tests in CI; the live version was deployed to GitHub Pages. DT-03 is a forward-looking milestone, not a fix for a broken prototype.
+- **Already working.** DT-02 builds and passes tests in CI. DT-03 is a forward-looking milestone, not a fix for a broken prototype.
 - **Hard problems preserved.** The DT-03 issues are real engineering work: geological data modelling, deterministic physics, UI for epistemic uncertainty, performance contracts. They are not pre-solved.
 
 ---
 
-## Repository health (as of DT-03 preparation)
+## Repository health (verified 30 October 2026)
 
 | Check | Result |
 |---|---|
 | Tests | 6 / 6 passing |
-| Build | Clean, zero TS errors, zero warnings |
-| CI | All runs green |
-| License | MIT, single author (ScDomi / Dominik Schwagerl) |
+| TypeScript / build | Clean at the audited commit |
+| CI | Latest audited remote run green |
+| License | MIT; personal ownership requires applicant confirmation |
 | Open issues | 12 (all DT-03, milestone set, labels applied) |
-| Dependencies | 0 vulnerabilities (`npm audit`) |
-| Commit authorship | 100 % ScDomi |
+| Dependencies | 0 known vulnerabilities in the audited lockfile (`npm audit`) |
+| Commit history | 7 commits, one GitHub author identity, repository is not a fork |
